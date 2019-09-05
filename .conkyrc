@@ -1,0 +1,78 @@
+background yes
+use_xft yes
+xftfont HandelGotD:size=9
+xftalpha 0.5
+update_interval 4.0
+total_run_times 0
+own_window yes
+own_window_type desktop
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_argb_visual yes
+own_window_argb_value 170
+double_buffer yes
+minimum_size 200 5
+maximum_width 220
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+default_color grey
+default_shade_color red
+default_outline_color green
+alignment top_right
+gap_x 12
+gap_y 48
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+override_utf8_locale no
+
+TEXT
+$sysname $kernel on $machine
+
+Uptime $alignr $uptime
+Load $alignr $loadavg
+CPU: $alignr ${execi 30 sensors | grep "Tdie" | cut -c15-19} .C
+Core 01: $alignr ${execi 30 sensors | grep "Core 0" | cut -c17-20} .C
+Core 02: $alignr ${execi 30 sensors | grep "Core 1" | cut -c17-20} .C
+Core 03: $alignr ${execi 30 sensors | grep "Core 2" | cut -c17-20} .C
+Core 04: $alignr ${execi 30 sensors | grep "Core 3" | cut -c17-20} .C
+Core 05: $alignr ${execi 30 sensors | grep "Core 4" | cut -c17-20} .C
+Core 06: $alignr ${execi 30 sensors | grep "Core 5" | cut -c17-20} .C
+
+SDD: $alignr ${execi 30 hddtemp /dev/sda | cut -c11-35}
+SDD TBW: $alignr ${execi 3600 /usr/sbin/smartctl -A /dev/sda |
+     awk '$0~/LBAs/{ printf "TBW %.1f\n", $10 * 512 / 1024^3 }'}
+         
+SDD: $alignr ${execi 30 hddtemp /dev/sda | cut -c32-33} .C
+SDD TBW: $alignr ${execi 3600 /usr/sbin/smartctl -A /dev/sda |
+      awk '$0~/LBAs_Written/{ printf "%.4f\n", $10 * 4096 / 1024^3 }'}
+         
+wlan0 $alignr ${addr wlp0s20f3}
+public ip $alignr ${execi 3600 dig +short myip.opendns.com @resolver1.opendns.com}
+
+Inbound $alignr ${downspeed wlp0s20f3} kb/s
+${downspeedgraph wlp0s20f3}
+Outbound $alignr ${upspeed wlp0s20f3} kb/s
+${upspeedgraph wlp0s20f3}
+
+$processes processes ($running_processes running)
+
+CPU $alignr ${cpu cpu0}%
+${cpubar cpu0}
+
+MEM $alignc $mem / $memmax $alignr $memperc%
+$membar
+
+Root $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_free_perc /}%
+${fs_bar /}
+
+swap $alignc $swap / $swapmax $alignr $swapperc%
+${swapbar}
+
+NAME $alignr PID CPU
+${top name 1} $alignr ${top pid 1} ${top cpu 1}
+${top name 2} $alignr ${top pid 2} ${top cpu 2}
+${top name 3} $alignr ${top pid 3} ${top cpu 3}
+${top name 4} $alignr ${top pid 4} ${top cpu 4}
+${top name 5} $alignr ${top pid 5} ${top cpu 5}
