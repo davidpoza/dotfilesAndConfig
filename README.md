@@ -1,2 +1,2 @@
-# dotfiles
-my dotfiles collection
+# dotFilesAndConfig
+my dotfiles collection and some config files.
