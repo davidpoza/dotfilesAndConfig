@@ -1,0 +1,104 @@
+@import url("resource:///org/gtk/libgtk/theme/Adwaita/gtk-contained-dark.css");
+
+headerbar.default-decoration button.titlebutton,
+.titlebar.default-decoration button.titlebutton {  
+    padding: 0;
+    min-width: 0px;
+    min-height: 0px;
+    margin: 0px 4px; 
+    box-shadow: none; }  
+    headerbar button.titlebutton,
+    .titlebar button.titlebutton {
+        padding: 0;
+        margin: 0px 4px;
+        min-width: 16px;
+        box-shadow: none;
+        border-color: transparent;
+        background-color: transparent;
+        background-image: none;}   
+    headerbar button.titlebutton:hover,
+    .titlebar button.titlebutton:hover,
+    headerbar button.titlebutton:active,
+    headerbar button.titlebutton:checked,
+    .titlebar button.titlebutton:active,
+    .titlebar button.titlebutton:checked {
+        color: transparent;
+        border-color: transparent;
+        background-color: transparent;} 
+    headerbar button.titlebutton.restore,
+    headerbar button.titlebutton.close,
+    headerbar button.titlebutton.maximize,
+    headerbar button.titlebutton.minimize,
+    .titlebar button.titlebutton.restore,
+    .titlebar button.titlebutton.close,
+    .titlebar button.titlebutton.maximize,
+    .titlebar button.titlebutton.minimize { 
+        color: transparent;
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-width: 0; }
+    headerbar button.titlebutton.restore:backdrop,
+    headerbar button.titlebutton.close:backdrop,
+    headerbar button.titlebutton.maximize:backdrop,
+    headerbar button.titlebutton.minimize:backdrop,
+    .titlebar button.titlebutton.restore:backdrop,
+    .titlebar button.titlebutton.close:backdrop,
+    .titlebar button.titlebutton.maximize:backdrop,
+    .titlebar button.titlebutton.minimize:backdrop {
+        opacity: 1; }
+      
+
+
+
+
+headerbar button.titlebutton.close,
+.titlebar .button.titlebutton.close {
+    margin-right: 2px;
+    background-image: -gtk-scaled(url("assets/guanbi.svg"), url("assets/guanbiX2.svg"));
+}
+headerbar button.titlebutton.close:backdrop,
+.titlebar .button.titlebutton.close:backdrop {
+    background-image: -gtk-scaled(url("assets/guanbi3.svg"), url("assets/guanbi3X2.svg"));
+}
+headerbar button.titlebutton.close:hover,
+.titlebar .button.titlebutton.close:hover {
+    background-image: -gtk-scaled(url("assets/guanbi1.svg"), url("assets/guanbi1X2.svg"));
+}
+headerbar button.titlebutton.close:active,
+.titlebar .button.titlebutton.close:active {
+    background-image: -gtk-scaled(url("assets/guanbi2.svg"), url("assets/guanbi2X2.svg"));
+}
+headerbar button.titlebutton.maximize,
+.titlebar .button.titlebutton.maximize {
+    background-image: -gtk-scaled(url("assets/zuida.svg"), url("assets/zuidaX2.svg"));
+}
+headerbar button.titlebutton.maximize:backdrop,
+.titlebar .button.titlebutton.maximize:backdrop {
+    background-image: -gtk-scaled(url("assets/zuida3.svg"), url("assets/zuida3X2.svg"));
+}
+headerbar button.titlebutton.maximize:hover,
+.titlebar .button.titlebutton.maximize:hover {
+    background-image: -gtk-scaled(url("assets/zuida1.svg"), url("assets/zuida1X2.svg"));
+}
+headerbar button.titlebutton.maximize:active,
+.titlebar .button.titlebutton.maximize:active {
+    background-image: -gtk-scaled(url("assets/zuida2.svg"), url("assets/zuida2X2.svg"));
+}
+headerbar button.titlebutton.minimize,
+.titlebar .button.titlebutton.minimize {
+    background-image: -gtk-scaled(url("assets/zuixiao.svg"), url("assets/zuixiaoX2.svg"));
+}
+headerbar button.titlebutton.minimize:backdrop,
+.titlebar .button.titlebutton.minimize:backdrop {
+    background-image: -gtk-scaled(url("assets/zuixiao3.svg"), url("assets/zuixiao3X2.svg"));
+}
+headerbar button.titlebutton.minimize:hover,
+.titlebar .button.titlebutton.minimize:hover {
+    background-image: -gtk-scaled(url("assets/zuixiao1.svg"), url("assets/zuixiao1X2.svg"));
+}
+headerbar button.titlebutton.minimize:active,
+.titlebar .button.titlebutton.minimize:active {
+    background-image: -gtk-scaled(url("assets/zuixiao2.svg"), url("assets/zuixiao2X2.svg"));
+}
+
