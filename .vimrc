@@ -27,6 +27,9 @@ set updatetime=1000
 au CursorHold * checktime  
 au FocusGained,BufEnter * :checktime
 
+" habilita el portapapeles del sistema cuando copiamos con ctrl+y en VISUAL
+" no hace falta con el vim-gnome, ya funciona solo
+" set clipboard=unnamedplus
 
 " muestra en la barra de estado el encoding del fichero
-set laststatus=2 statusline=%f\ %m\ %{&fileencoding?&fileencoding:&encoding}  
+set laststatus=2 statusline=%f\ %m\ %{&fileencoding?&fileencoding:&encoding} 
