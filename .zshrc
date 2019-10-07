@@ -104,3 +104,4 @@ export NVM_DIR=~/.nvm
 
 
 alias lla="ls -la"
+alias dockerlogs="docker logs -f fusion-engine 2>&1 | ccze -m ansi"
