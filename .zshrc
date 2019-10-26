@@ -103,5 +103,5 @@ export NVM_DIR=~/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"    
 
 
-alias lla="ls -la"
+alias lla="ls -lah"
 alias dockerlogs="docker logs -f fusion-engine 2>&1 | ccze -m ansi"
