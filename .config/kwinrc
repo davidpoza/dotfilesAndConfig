@@ -1,0 +1,102 @@
+[$Version]
+update_info=kwin.upd:replace-scalein-with-scale,kwin.upd:port-minimizeanimation-effect-to-js,kwin.upd:port-scale-effect-to-js,kwin.upd:port-dimscreen-effect-to-js,kwin.upd:auto-bordersize,kwin.upd:animation-speed
+
+[Compositing]
+Backend=OpenGL
+Enabled=true
+GLCore=true
+GLPreferBufferSwap=a
+GLTextureFilter=2
+HiddenPreviews=5
+OpenGLIsUnsafe=false
+WindowsBlockCompositing=true
+XRenderSmoothScale=false
+
+[Desktops]
+Id_1=ac0b8d7d-62b5-4ac1-906d-91dfd4038a02
+Id_2=09e11b8a-80b7-4e4c-bc06-5319f05db2cd
+Number=2
+Rows=1
+
+[Effect-MagicLamp]
+AnimationDuration=400
+
+[ModifierOnlyShortcuts]
+Alt=org.kde.krunner,/App,,display
+Meta=org.kde.kglobalaccel,/component/kwin,,invokeShortcut,Expose
+
+[MouseBindings]
+CommandActiveTitlebar1=Raise
+CommandActiveTitlebar2=Nothing
+CommandActiveTitlebar3=Operations menu
+CommandAll1=Move
+CommandAll2=Toggle raise and lower
+CommandAll3=Resize
+CommandAllKey=Meta
+CommandAllWheel=Nothing
+CommandInactiveTitlebar1=Activate and raise
+CommandInactiveTitlebar2=Nothing
+CommandInactiveTitlebar3=Operations menu
+CommandTitlebarWheel=Nothing
+CommandWindow1=Activate, raise and pass click
+CommandWindow2=Activate and pass click
+CommandWindow3=Activate and pass click
+CommandWindowWheel=Scroll
+
+[Plugins]
+blurEnabled=false
+contrastEnabled=false
+kwin-script-tilingEnabled=true
+kwin4_effect_fadeEnabled=false
+kwin4_effect_fadingpopupsEnabled=false
+kwin4_effect_frozenappEnabled=false
+kwin4_effect_loginEnabled=false
+kwin4_effect_logoutEnabled=false
+kwin4_effect_maximizeEnabled=false
+kwin4_effect_morphingpopupsEnabled=false
+kwin4_effect_squashEnabled=false
+kwin4_effect_translucencyEnabled=false
+kwin4_effect_windowapertureEnabled=false
+minimizeallEnabled=false
+screenedgeEnabled=false
+slideEnabled=false
+slidingpopupsEnabled=false
+synchronizeskipswitcherEnabled=false
+videowallEnabled=false
+windowgeometryEnabled=false
+zoomEnabled=false
+
+[TabBox]
+DesktopLayout=org.kde.breeze.desktop
+DesktopListLayout=org.kde.breeze.desktop
+LayoutName=org.kde.breeze.desktop
+
+[Windows]
+ActiveMouseScreen=false
+AutoRaise=false
+AutoRaiseInterval=750
+BorderSnapZone=10
+CenterSnapZone=0
+ClickRaise=true
+DelayFocusInterval=300
+FocusPolicy=ClickToFocus
+FocusStealingPreventionLevel=1
+GeometryTip=false
+HideUtilityWindowsForInactive=true
+MaximizeButtonLeftClickCommand=Maximize
+MaximizeButtonMiddleClickCommand=Maximize (vertical only)
+MaximizeButtonRightClickCommand=Maximize (horizontal only)
+NextFocusPrefersMouse=false
+Placement=Smart
+SeparateScreenFocus=false
+ShadeHover=false
+ShadeHoverInterval=250
+SnapOnlyWhenOverlapping=false
+TitlebarDoubleClickCommand=Maximize
+WindowSnapZone=10
+
+[org.kde.kdecoration2]
+ButtonsOnLeft=XIA
+ButtonsOnRight=
+library=org.kde.kwin.aurorae
+theme=__aurorae__svg__McMojave
