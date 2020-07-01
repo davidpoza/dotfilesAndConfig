@@ -21,6 +21,9 @@ Rows=1
 [Effect-MagicLamp]
 AnimationDuration=400
 
+[Effect-PresentWindows]
+LayoutMode=0
+
 [ModifierOnlyShortcuts]
 Alt=org.kde.krunner,/App,,display
 Meta=org.kde.kglobalaccel,/component/kwin,,invokeShortcut,Expose
