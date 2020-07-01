@@ -1,0 +1,185 @@
+/* github style */
+
+* {
+  color: #24292e;
+  font-family: "sf pro display", "Segoe UI",Helvetica,Arial,sans-serif;
+}
+
+h1 {
+  margin-top: 0 !important;
+  padding-bottom: .3em;
+  border-bottom: 1px solid #eaecef;
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: 1.5em;
+  padding-bottom: .3em;
+  border-bottom: 1px solid #eaecef;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 1.25em;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  margin-top: 24px;
+}
+
+pre {  
+  padding: 6px 10px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  background-color: #f6f8fa;
+  overflow-x: auto;
+  font-size: 0.7em !important;
+  line-height: 1.1em;
+}
+
+pre *{
+  font-family: monospace !important;  
+}
+
+code *, .inline-code, .joplin-editable {
+  font-family: monospace !important;
+  font-size: 1em !important;
+  line-height: 1.1em;
+}
+
+.inline-code {
+  font-size: 0.7em !important;
+}
+
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e4e8;
+  border: 0;
+}
+
+td {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+tr:nth-child(even) {
+  background-color: #f6f8fa;
+}
+
+
+
+/* Numbering in headers */
+
+body {
+  counter-reset: h2;
+}
+
+h2 {
+  counter-reset: h3;
+}
+
+h3 {
+  counter-reset: h4;
+}
+
+h4 {
+  counter-reset: h5;
+}
+
+h5 {
+  counter-reset: h6;
+}
+
+h2:before {
+  content: counter(h2, decimal) ". ";
+  counter-increment: h2;
+}
+
+h3:before {
+  content: counter(h2, decimal) "." counter(h3, decimal) ". ";
+  counter-increment: h3;
+}
+
+h4:before {
+  content: counter(h2, decimal) "." counter(h3, decimal) "." counter(h4, decimal) ". ";
+  counter-increment: h4;
+}
+
+h5:before {
+  content: counter(h2, decimal) "." counter(h3, decimal) "." counter(h4, decimal) "." counter(h5, decimal) ". ";
+  counter-increment: h5;
+}
+
+h6:before {
+  content: counter(h2, decimal) "." counter(h3, decimal) "." counter(h4, decimal) "." counter(h5, decimal) "."
+  counter(h6, decimal) ". ";
+  counter-increment: h6;
+}
+
+/* numbering in TOC  */
+
+nav.table-of-contents {
+  font-size: 0.8em;
+}
+
+nav.table-of-contents ol { counter-reset: list-item; }
+nav.table-of-contents li { 
+  display: block;
+  counter-increment: list-item;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+nav.table-of-contents li:before {
+  content: counters(list-item,'.') '. ';
+}
+
+
+@media all and (min-width: 680px) {
+  nav.table-of-contents>ul {
+    margin-right: 10px;
+    top: 0;
+    right: 0;
+    position: fixed;
+    z-index: 99;
+    background: white;
+    padding: 15px 10px 15px 15px;
+    box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.33);
+    border-radius: 2px;
+    width: 160px;
+  }
+  nav.table-of-contents li{
+    padding: 0;
+  }
+  .table-of-contents li+li {
+    border: none;
+  }
+}
+
+@media all and (min-width: 680px) and (max-width: 1000px) {
+  #rendered-md {
+  width: 75%;
+  }
+}
+
+@media all and (min-width: 1001px) {
+  #rendered-md {
+  width: 80%;
+  }
+}
