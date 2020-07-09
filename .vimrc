@@ -58,15 +58,59 @@ Plug 'easymotion/vim-easymotion'
 
 " arbol de ficheros
 Plug 'scrooloose/nerdtree'
+ 
+" muestra el estado de los ficheros (git) en nerdtree
+Plug 'xuyuanp/nerdtree-git-plugin'
 
 " Para movernos entre splits
 Plug 'christoomey/vim-tmux-navigator'
+
+" Para buscar ficheros con ctrl+p (similar a vscode)
+Plug 'ctrlpvim/ctrlp.vim'
+
+" Búsqueda mejorada
+Plug 'haya14busa/incsearch.vim'
+
+" Líneas de indentación
+Plug 'Yggdroot/indentLine'
+
+" Inserta pares de comillas, paréntesis automáticamente
+Plug 'jiangmiao/auto-pairs'
+
 call plug#end()
 
 " seleccionamos el theme
 colorscheme gruvbox
 let g:gruvbox_contrast_dark = "hard"
 let mapleader=" "
+
+"==incSearch========
+" Maps requeridos
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+
+" Quitar resaltado luego de buscar
+let g:incsearch#auto_nohlsearch = 1
+"===================
+
+
+"==indentLine=======
+" No mostrar en ciertos tipos de buffers y archivos
+let g:indentLine_fileTypeExclude = ['text', 'sh', 'help', 'terminal']
+let g:indentLine_bufNameExclude = ['NERD_tree.*', 'term:.*']
+"===================
+
+"==CtrlP config=====
+" Archivos ignorados
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|node_modules)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ }
+
+" Ignorar archivos en .gitignore
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+"=================
 
 " custom shortcuts
 nmap <Leader>s <Plug>(easymotion-s2)
