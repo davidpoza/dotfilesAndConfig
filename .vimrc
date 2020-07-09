@@ -71,6 +71,8 @@ let mapleader=" "
 " custom shortcuts
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>nt :NERDTreeFind<CR>
+nmap <C-Up> <Up>ddp<Up>
+nmap <C-Down> ddp
 
 " para solucionar el problema que no dejaba funciona C+h
 " https://github.com/christoomey/vim-tmux-navigator/issues/71
