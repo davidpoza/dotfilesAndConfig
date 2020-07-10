@@ -77,6 +77,9 @@ Plug 'Yggdroot/indentLine'
 " Inserta pares de comillas, paréntesis automáticamente
 Plug 'jiangmiao/auto-pairs'
 
+" descripción del commit y autor en la misma linea al estilo gitlens
+Plug 'tveskag/nvim-blame-line'
+
 call plug#end()
 
 " seleccionamos el theme
@@ -112,13 +115,16 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 "=================
 
+" nvim-blame-line
+autocmd BufEnter * EnableBlameLine
+let g:blameLineVirtualTextPrefix = '// '
+
 " custom shortcuts
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>nt :NERDTreeFind<CR>
 nmap <C-Up> <Up>ddp<Up>
 nmap <C-Down> ddp
 nnoremap <C-b> <C-v>
-
 " para solucionar el problema que no dejaba funciona C+h
 " https://github.com/christoomey/vim-tmux-navigator/issues/71
 if has('nvim')
