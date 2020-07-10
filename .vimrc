@@ -80,6 +80,12 @@ Plug 'jiangmiao/auto-pairs'
 " descripción del commit y autor en la misma linea al estilo gitlens
 Plug 'tveskag/nvim-blame-line'
 
+" barra de estado mejorada
+Plug 'vim-airline/vim-airline'
+
+" plugin para git
+Plug 'tpope/vim-fugitive' 
+
 call plug#end()
 
 " seleccionamos el theme
