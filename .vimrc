@@ -84,7 +84,11 @@ Plug 'tveskag/nvim-blame-line'
 Plug 'vim-airline/vim-airline'
 
 " plugin para git
-Plug 'tpope/vim-fugitive' 
+Plug 'tpope/vim-fugitive'
+
+" El mejor plugin de autocompletado
+" IMPORTANTE: :CocInstall coc-css (y coc-json, coc-html, coc-tsserver)
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -124,6 +128,9 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 " nvim-blame-line
 autocmd BufEnter * EnableBlameLine
 let g:blameLineVirtualTextPrefix = '// '
+
+" config COC
+inoremap <silent><expr> <c-space> coc#refresh()
 
 " custom shortcuts
 nmap <Leader>s <Plug>(easymotion-s2)
