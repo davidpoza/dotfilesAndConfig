@@ -79,9 +79,6 @@ plugins=(git docker docker-compose npx npm nvm autojump copyfile)
 
 source $ZSH/oh-my-zsh.sh
 
-export NVM_DIR=~/.nvm
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -111,7 +108,15 @@ export NVM_DIR=~/.nvm
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# VARIABLES ENTORNO
+export NVM_DIR=~/.nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+
+# ALIAS 
+################################################
 alias ls='lsd --group-dirs first'
 alias dockerlogs="docker logs -f fusion-engine 2>&1 | ccze -m ansi"
 
@@ -125,4 +130,3 @@ function replaceBuildScript {
 }
 alias upgradewebpackmemory="replaceBuildScript && docker stop fusion-webpack &&  docker start fusion-webpack"
 alias upgradewebpackmemorywithoutsourcemaps="replaceBuildScript && docker cp /home/davidpoza/Downloads/arc/devtool.js fusion-webpack:/opt/engine/webpack/_shared/devtool.js && docker stop fusion-webpack && docker start fusion-webpack"
-
