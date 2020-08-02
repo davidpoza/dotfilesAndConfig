@@ -8,7 +8,7 @@
       "command": "copyRelativeFilePath"
   },
   {
-      "key": "ctrl+alt+a",
+      "key": "ctrl+shift+a",
       "command": "wwm.aligncode",
       "when": "editorTextFocus && !editorReadonly"
   },
