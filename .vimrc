@@ -1,3 +1,6 @@
+" deshabilita el cambio de cursor shape, ya que interfiere con el default del terminal
+set guicursor=
+
 " para solucionar problema que provoca que no funcionen cursores arrow
 set nocompatible
 set backspace=2
