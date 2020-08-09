@@ -79,7 +79,7 @@ set_from_resource $ws19 i3-wm.workspace.19.name "19"
 bindsym Ctrl+period exec emoji-picker
 
 ## Launch // Terminal // <> Enter ##
-bindsym $mod+Return exec /usr/bin/x-terminal-emulator
+bindsym $mod+Return exec /usr/bin/alacritty
 
 ## Launch // Browser // <><Shift> Enter ##
 bindsym $mod+Shift+Return exec gtk-launch $(xdg-settings get default-web-browser)
@@ -117,10 +117,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 ## Navigate // Relative Window // <> k j h l ##
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+#bindsym $mod+h focus left
+#bindsym $mod+j focus down
+#bindsym $mod+k focus up
+#bindsym $mod+l focus right
 
 ## Navigate // Workspaces 1-10 // <> 0..9 ##
 # Habilitamos el back and forth
@@ -162,7 +162,7 @@ bindsym $mod+Shift+Tab workspace prev
 bindsym $mod+$alt+Left workspace prev
 
 ## Navigate // Scratchpad // <><Ctrl> a ##
-bindsym $mod+Ctrl+a scratchpad show
+bindsym $mod+p scratchpad show
 
 ###############################################################################
 # Window and Workspace Configuration
@@ -288,7 +288,7 @@ bindsym $mod+Shift+p exec $i3-wm.program.shutdown
 
 ## Session // Lock Screen // <> Escape ##
 set_from_resource $i3-wm.program.lock i3-wm.program.lock dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock
-bindsym $mod+Escape exec $i3-wm.program.lock
+bindsym $mod+l exec $i3-wm.program.lock
 
 ## Session // Sleep // <><Shift> s ##
 set_from_resource $i3-wm.program.sleep i3-wm.program.sleep systemctl suspend
@@ -473,7 +473,7 @@ set_from_resource $i3-wm.bar.workspace.urgent.background.color i3-wm.bar.workspa
 set_from_resource $i3-wm.bar.workspace.urgent.text.color i3-wm.bar.workspace.urgent.text.color "#fdf6e3"
 
 # Sets i3 font for dialogs
-set_from_resource $i3-wm.font i3-wm.font pango:Source Code Pro Medium 13
+set_from_resource $i3-wm.font i3-wm.font pango:Source Code Pro Medium 8
 font $i3-wm.font
 
 ###############################################################################
@@ -481,7 +481,7 @@ font $i3-wm.font
 ###############################################################################
 
 set_from_resource $i3-wm.bar.position i3-wm.bar.position top
-set_from_resource $i3-wm.bar.font i3-wm.bar.font pango:Source Code Pro Medium 13, Material Design Icons 13
+set_from_resource $i3-wm.bar.font i3-wm.bar.font pango:Source Code Pro Medium 8, Material Design Icons 8
 set_from_resource $i3-wm.bar.separator i3-wm.bar.separator " "
 set_from_resource $i3-wm.bar.trayoutput i3-wm.bar.trayoutput primary
 set_from_resource $i3-wm.bar.stripworkspacenumbers i3-wm.bar.stripworkspacenumbers yes
