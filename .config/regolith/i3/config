@@ -337,7 +337,7 @@ bindsym $mod+period exec /usr/bin/i3-snapshot -c < /tmp/i3-snapshot
 bindsym $mod+i bar mode toggle
 
 # Cause Settings app to float above tiled windows
-floating_maximum_size -1 x -1i
+floating_maximum_size -1 x -1
 
 # Listado de ventanas flotantes
 for_window [class="Gnome-control-center"] floating enable
