@@ -52,7 +52,7 @@ bindsym Print exec flameshot gui
 # These are the labels which define each i3 workspace.
 ###############################################################################
 # mouse doesnt't follow focus
-focus_follows_mouse no
+mouse_warping none
 
 set_from_resource $ws1  i3-wm.workspace.01.name "1"
 set_from_resource $ws2  i3-wm.workspace.02.name "2"
