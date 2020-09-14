@@ -44,7 +44,7 @@ set_from_resource $alt  i3-wm.alt Mod1
 
 for_window [title="Microsoft Teams Notification"] floating enable
 for_window [class="Gnome-calculator"] floating enable, exec xdotool search --class Gnome-calculator getwindowpid -- windowsize %@ 350 395
-
+for_window [class="org.remmina.Remmina"] floating enable
 
 # Para que funcione la tecla imprimir pantalla hay que deshabilitar el atajo de gnome sen Settings del sistema
 bindsym Print exec flameshot gui
