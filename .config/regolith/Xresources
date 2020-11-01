@@ -4,3 +4,4 @@ i3-wm.bar.font: pango:Source Code Pro Medium 9, Material Design Icons 9
 i3xrocks.value.font: Source Code Pro Medium 8
 rofi.font: Source Code Pro Medium 12
 i3-wm.font: SF Pro Text Regular 10
+gnome.wallpaper: "/home/davidpoza/Pictures/11-0-Color-Day.jpg"
