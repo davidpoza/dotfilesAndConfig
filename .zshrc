@@ -130,3 +130,7 @@ function replaceBuildScript {
 }
 alias upgradewebpackmemory="replaceBuildScript && docker stop fusion-webpack &&  docker start fusion-webpack"
 alias upgradewebpackmemorywithoutsourcemaps="replaceBuildScript && docker cp /home/davidpoza/Downloads/arc/devtool.js fusion-webpack:/opt/engine/webpack/_shared/devtool.js && docker stop fusion-webpack && docker start fusion-webpack"
+
+alias xrandr-layout1="xrandr --output HDMI-0 --primary --mode 2560x1080 --rate 60.0 --output DisplayPort-0 --mode 1920x1080 --rate 60.00 --rotate right --left-of HDMI-0 --output DVI-4 --mode 1920x1080 --rate 60.00 --right-of HDMI-0"
+alias xrandr-layout2="xrandr --output HDMI-0 --primary --mode 2560x1080 --rate 60.0 --output DisplayPort-0 --mode 1920x1080 --rate 60.00 --rotate right --left-of HDMI-0"
+
