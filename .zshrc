@@ -114,6 +114,7 @@ export NVM_DIR=~/.nvm
 
 export VISUAL=nvim
 export EDITOR="$VISUAL"
+alias vi="nvim"
 
 # ALIAS 
 ################################################
