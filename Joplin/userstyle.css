@@ -1,8 +1,20 @@
 /* github style */
 
+img + br + em {
+	color: grey;
+	font-size: 0.8em;
+	display: block;
+	margin-top: -10px;
+}
+
 * {
   color: #24292e;
   font-family: "sf pro display", "Segoe UI",Helvetica,Arial,sans-serif;
+}
+
+blockquote {
+	border: 1px solid #dfe2e5;
+	border-left: 4px solid #dfe2e5;
 }
 
 h1 {
@@ -160,26 +172,35 @@ nav.table-of-contents li:before {
     z-index: 99;
     background: white;
     padding: 15px 10px 15px 15px;
-    box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.33);
     border-radius: 2px;
-    width: 160px;
+    width: 5px;
+    height: 90%;
+    transition: .2s;
+  }
+  nav.table-of-contents::after {
+	content: "[TOC - move your cursor to the right edge]";
+  }
+  nav.table-of-contents>ul:hover::before {
+	content: "TABLE OF CONTENTS"
+  }
+  nav.table-of-contents>ul:hover {
+	background: #F8F8F8;
+	box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.33);
+	width: 260px;
+	color: none;
+	overflow: scroll;
+  }
+  nav.table-of-contents>ul:hover li {
+	display: list-item;
   }
   nav.table-of-contents li{
-    padding: 0;
+    display: none;
+	white-space: nowrap;
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
   }
   .table-of-contents li+li {
     border: none;
-  }
-}
-
-@media all and (min-width: 680px) and (max-width: 1000px) {
-  #rendered-md {
-  width: 75%;
-  }
-}
-
-@media all and (min-width: 1001px) {
-  #rendered-md {
-  width: 80%;
   }
 }
