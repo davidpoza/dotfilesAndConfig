@@ -1,10 +1,13 @@
 /* github style */
 
 img + br + em {
-	color: grey;
+	color: white;
 	font-size: 0.8em;
 	display: block;
-	margin-top: -10px;
+	margin-top: -8px;
+	line-height: 1em;
+	background-color: #404040;
+	padding: 2px;
 }
 
 * {
