@@ -120,6 +120,7 @@ alias vi="nvim"
 ################################################
 alias ls='lsd --group-dirs first'
 alias dockerlogs="docker logs -f fusion-engine 2>&1 | ccze -m ansi"
+alias dockerps="docker ps --format 'table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Names}}\t{{.Ports}}'"
 
 function lanzarTest { npx jest "$1" --coverage --collectCoverageFrom=**/"$1".*; }
 
