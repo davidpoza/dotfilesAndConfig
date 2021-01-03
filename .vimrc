@@ -54,7 +54,9 @@ syntax enable
 " usando el gestor de extensiones vim plug: https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 " theme
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
+
 
 " moverse a saltos usando una búsqueda de caracteres
 Plug 'easymotion/vim-easymotion'
@@ -96,8 +98,11 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " seleccionamos el theme
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = "hard"
+set t_Co=256
+" colorscheme gruvbox
+colorscheme onehalfdark
+" let g:gruvbox_contrast_dark = "hard"
+let g:airline_theme='onehalfdark'
 let mapleader=" "
 
 "==incSearch========
