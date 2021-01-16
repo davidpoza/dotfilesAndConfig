@@ -136,3 +136,5 @@ alias upgradewebpackmemorywithoutsourcemaps="replaceBuildScript && docker cp /ho
 alias xrandr-layout1="xrandr --output HDMI-0 --primary --mode 2560x1080 --rate 60.0 --output DisplayPort-0 --mode 1920x1080 --rate 60.00 --rotate right --left-of HDMI-0 --output DVI-4 --mode 1920x1080 --rate 60.00 --right-of HDMI-0"
 alias xrandr-layout2="xrandr --output HDMI-0 --primary --mode 2560x1080 --rate 60.0 --output DisplayPort-0 --mode 1920x1080 --rate 60.00 --rotate right --left-of HDMI-0"
 
+// was having problems with xdotool due to setxbmap -query was set as es,us
+setxkbmap es
