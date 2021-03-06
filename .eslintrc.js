@@ -7,6 +7,7 @@ eslint-plugin-import
 eslint-plugin-jsx-a11y
 eslint-plugin-react
 eslint-plugin-react-hooks
+eslint-import-resolver-webpack
 */
 
 module.exports = {
@@ -15,6 +16,20 @@ module.exports = {
     node: true,
     commonjs: true,
     es2021: true,
+  },
+  settings: {
+    'import/resolver': {
+      webpack: {
+        config: {
+          resolve: {
+            extensions: [
+              '.js',
+              '.jsx',
+            ],
+          },
+        },
+      },
+    },
   },
   extends: [
     'plugin:react/recommended',
@@ -32,8 +47,14 @@ module.exports = {
   ],
   rules: {
     'max-len': [2, 120, 2],
-    'import/extensions': ['error', 'always', { ignorePackages: true }],
+    'import/extensions': ['error', 'always', {
+      ts: 'never',
+      tsx: 'never',
+      js: 'never',
+      jsx: 'never',
+    }],
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'import/no-unresolved': ['error'],
   },
 };
+
