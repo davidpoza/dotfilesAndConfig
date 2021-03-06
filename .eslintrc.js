@@ -32,8 +32,8 @@ module.exports = {
   ],
   rules: {
     'max-len': [2, 120, 2],
-    'import/extensions': ['warning', 'ignorePackages'],
-    'import/no-extraneous-dependencies': ['error', { 'devDependencies': true }],
-    'import/no-unresolved': ['error', { ignore: [rootImportRegex] }],
+    'import/extensions': ['error', 'always', { ignorePackages: true }],
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'import/no-unresolved': ['error'],
   },
 };
