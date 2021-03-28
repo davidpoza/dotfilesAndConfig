@@ -146,6 +146,11 @@ nmap <Leader>nt :NERDTreeFind<CR>
 nmap <C-Up> <Up>ddp<Up>
 nmap <C-Down> ddp
 nnoremap <C-b> <C-v>
+
+" para que funcionen HOME y END cuando usamos tmux
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
+
 " para solucionar el problema que no dejaba funciona C+h
 " https://github.com/christoomey/vim-tmux-navigator/issues/71
 if has('nvim')
