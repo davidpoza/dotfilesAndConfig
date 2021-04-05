@@ -57,6 +57,8 @@ call plug#begin('~/.vim/plugged')
 " Plug 'morhetz/gruvbox'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
+" soporte de OSC52 para copiar al portapapeles del sistema
+Plug 'ojroques/vim-oscyank'
 
 " moverse a saltos usando una búsqueda de caracteres
 Plug 'easymotion/vim-easymotion'
