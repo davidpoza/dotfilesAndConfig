@@ -148,6 +148,8 @@ nmap <Leader>nt :NERDTreeFind<CR>
 nmap <C-Up> <Up>ddp<Up>
 nmap <C-Down> ddp
 nnoremap <C-b> <C-v>
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
 
 " para que funcionen HOME y END cuando usamos tmux
 inoremap <C-a> <Home>
