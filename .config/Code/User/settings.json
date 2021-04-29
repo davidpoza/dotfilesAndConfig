@@ -97,6 +97,12 @@
         "color": "white",
         "borderRadius": "4px",
         "backgroundColor": "#255c25",
+      },
+      {
+        "text": "@TODO",
+        "color": "white",
+        "borderRadius": "4px",
+        "backgroundColor": "#255c25",
       }
     ],
     "colorHelper.disableGpu": 1, //si no deshabilito esto no me funciona
