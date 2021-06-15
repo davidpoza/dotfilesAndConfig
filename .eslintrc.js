@@ -1,13 +1,14 @@
 /*
 Needs following dependencies:
 
-eslint
-eslint-config-airbnb-base
-eslint-plugin-import
-eslint-plugin-jsx-a11y
-eslint-plugin-react
-eslint-plugin-react-hooks
-eslint-import-resolver-webpack
+npm install -g eslint
+npm install -g eslint-config-airbnb
+npm install -g eslint-config-airbnb-base
+npm install -g eslint-plugin-import
+npm install -g eslint-plugin-jsx-a11y
+npm install -g eslint-plugin-react
+npm install -g eslint-plugin-react-hooks
+npm install -g eslint-import-resolver-webpack
 */
 
 module.exports = {
